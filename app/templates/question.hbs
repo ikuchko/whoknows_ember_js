@@ -1,0 +1,14 @@
+<div>
+  <div class="inline">
+    <p>@{{model.author}}</p>
+  </div>
+  <div class="inline">
+    <div>
+      <h4>{{model.author}}</h4>
+    </div>
+    <div class="question-body">
+      {{markdown-to-html markdown=model.question}}
+    </div>
+
+  </div>
+</div>

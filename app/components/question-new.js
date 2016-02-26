@@ -8,6 +8,9 @@ export default Ember.Component.extend({
         title: this.get('title'),
         question: this.get('question')
       }
+      this.set('authot', '');
+      this.set('title', '');
+      this.set('question', '');
       this.sendAction('save', params);
     }
   }

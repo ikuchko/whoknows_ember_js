@@ -1,1 +1,13 @@
-{{question-new save="save"}}
+<div class="row">
+  <div class="col-md-7">
+    <h1>Do you have something to ask?</h1>
+    <br>
+    {{question-new save="save"}}
+  </div>
+  <div class="col-md-5">
+    <h2>Latest questions:</h2>
+    {{#each model as |question|}}
+      {{question-tile question=question}}
+    {{/each}}
+  </div>
+</div>
