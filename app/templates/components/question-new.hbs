@@ -3,25 +3,41 @@
   <div class="form-group">
     <label class="col-sm-2" for="author">Author</label>
     <div class="col-sm-10">
-      {{input value=author id="author" class="form-control" placeholder="Author name"}}
+      {{#if model}}
+        {{input value=model.author id="author" class="form-control" placeholder="Author name"}}
+      {{else}}
+        {{input value=author id="author" class="form-control" placeholder="Author name"}}
+      {{/if}}
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-2" for="title">Title</label>
     <div class="col-sm-10">
+      {{#if model}}
+        {{input value=model.title id="title" class="form-control" placeholder="Question Title"}}
+      {{else}}
         {{input value=title id="title" class="form-control" placeholder="Question Title"}}
+      {{/if}}
     </div>
   </div>
 
   <div class="form-group">
     <label class="col-sm-2" for="body">Question</label>
     <div class="col-sm-10">
+      {{#if model}}
+        {{textarea value=model.question id="question" cols="80" rows="20" class="form-control" placeholder="Question Content..."}}
+      {{else}}
         {{textarea value=question id="question" cols="80" rows="20" class="form-control" placeholder="Question Content..."}}
+      {{/if}}
     </div>
   </div>
 
   <div class="form-group">
-      <button {{action 'save'}} class="btn btn-primary btn-lg btn-float-right">Post question</button>
+    {{#if model}}
+      <button {{action 'updateQuestion' model}} class="btn btn-default btn-lg btn-float-right">Update question</button>
+    {{else}}
+      <button {{action 'save'}} class="btn btn-default btn-lg btn-float-right">Post question</button>
+    {{/if}}
   </div>
 </form>
