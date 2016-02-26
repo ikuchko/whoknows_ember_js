@@ -4,7 +4,7 @@
 
 <div class="row">
   <div class="col-md-1">
-    <p>@{{model.author}}</p>
+    <p><strong>@{{model.author}}</strong></p>
   </div>
   <div class="col-md-10">
     <div>
@@ -19,5 +19,6 @@
   </div>
 </div>
 
-<button {{action 'showUpdateFrom'}} class="btn-link">Update</button>
+<button {{action 'showUpdateFrom'}} class="btn-link inline">Update</button>
+<button {{action 'deleteQuestion' model}} class="btn-link inline">Delete</button>
 {{/if}}

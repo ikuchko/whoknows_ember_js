@@ -16,6 +16,10 @@ export default Ember.Component.extend({
       });
       question.save();
       this.set('isUpdateShowing', false);
+    },
+
+    deleteQuestion(question) {
+      this.sendAction('deleteQuestion', question);
     }
   }
 });
