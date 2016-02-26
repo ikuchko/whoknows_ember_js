@@ -1,14 +1,17 @@
-<div>
-  <div class="inline">
+<div class="row">
+  <div class="col-md-1">
     <p>@{{model.author}}</p>
   </div>
-  <div class="inline">
+  <div class="col-md-10">
     <div>
-      <h4>{{model.author}}</h4>
+      <h4>{{model.title}}</h4>
     </div>
     <div class="question-body">
-      {{markdown-to-html markdown=model.question}}
+      <section>
+        {{markdown-to-html markdown=model.question}}
+      </section>
     </div>
 
   </div>
 </div>
+{{answer-form}}
