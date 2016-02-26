@@ -1,17 +1,2 @@
-<div class="row">
-  <div class="col-md-1">
-    <p>@{{model.author}}</p>
-  </div>
-  <div class="col-md-10">
-    <div>
-      <h4>{{model.title}}</h4>
-    </div>
-    <div class="question-body">
-      <section>
-        {{markdown-to-html markdown=model.question}}
-      </section>
-    </div>
-
-  </div>
-</div>
+{{question-form model=model}}
 {{answer-form addAnswer="addAnswer" question=model}}
