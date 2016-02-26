@@ -1,5 +1,8 @@
 <form>
   <h3>Answers:</h3>
+  {{#each question.answers as |answer|}}
+    {{answer-tile answer=answer}}
+  {{/each}}
   <div class="form-group">
     <label for="author">author</label>
     {{input value=author placeholder="Enter your name" class="form-control"}}
