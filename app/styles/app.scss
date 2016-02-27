@@ -1,9 +1,39 @@
 @import 'ember-paper';
 
+$grey-light: #F8F8F8;
+$brown: #613838;
+
 .btn-float-right {
   float: right;
 }
 
 .inline {
   display: inline-block;
+}
+
+.author-block {
+  padding-top: 10px;
+}
+
+.content-block {
+  border-left: solid 1px;
+}
+
+.answer-tile {
+  font-size: 16px;
+  background-color: $grey-light;
+  margin-bottom: 20px;
+  border-top: solid 1px;
+}
+
+.answer-body {
+  padding-left: 20px;
+}
+
+.author {
+  color: $brown
+}
+p {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
 }

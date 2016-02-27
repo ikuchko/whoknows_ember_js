@@ -3,10 +3,10 @@
 {{else}}
 
 <div class="row">
-  <div class="col-md-1">
-    <p><strong>@{{model.author}}</strong></p>
+  <div class="col-md-1 author-block">
+    <p><strong class="author">@{{model.author}}</strong></p>
   </div>
-  <div class="col-md-10">
+  <div class="col-md-10 content-block">
     <div>
       <h4>{{model.title}}</h4>
     </div>
@@ -16,9 +16,9 @@
       </section>
     </div>
 
+    <button {{action 'showUpdateFrom'}} class="btn-link inline">Update</button>
+    <button {{action 'deleteQuestion' model}} class="btn-link inline">Delete</button>
   </div>
 </div>
 
-<button {{action 'showUpdateFrom'}} class="btn-link inline">Update</button>
-<button {{action 'deleteQuestion' model}} class="btn-link inline">Delete</button>
 {{/if}}

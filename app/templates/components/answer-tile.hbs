@@ -1,8 +1,8 @@
 <div>
   <div class="answer-header">
-    {{answer.author}}
+    <strong class="author">@{{answer.author}}</strong>
   </div>
-  <div>
-    {{answer.answer}}
+  <div class="answer-body">
+    {{markdown-to-html markdown=answer.answer}}
   </div>
 </div>
